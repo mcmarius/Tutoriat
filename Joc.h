@@ -10,6 +10,7 @@
 class Joc {
     int a;
 public:
+    // Joc() {}
     Joc(int a);
     int getA() const;
 };
