@@ -9,7 +9,7 @@ Francez::~Francez() {
 }
 
 Francez::Francez() {
-    //cout<<"c f\n";
+    //cout<<"Constructor Francez\n";
 }
 
 short Francez::IQ() {

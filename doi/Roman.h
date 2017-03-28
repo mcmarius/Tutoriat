@@ -11,6 +11,7 @@ class Roman : public European {
 
 public:
     Roman();
+    //Roman(int, int, int);
     short IQ();
     ~Roman();
 };

@@ -8,5 +8,6 @@
 #include <iostream>
 
 using std::cout;
+using std::endl;
 
 #endif //TUTORIAT_INCLUDE_H

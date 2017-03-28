@@ -5,7 +5,6 @@
 #ifndef TUTORIAT_FRANCEZ_H
 #define TUTORIAT_FRANCEZ_H
 
-#include "../include.h"
 #include "European.h"
 
 class Francez : public European {

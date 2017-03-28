@@ -4,7 +4,8 @@
 
 #include "Joc.h"
 
-int Joc::nrJocuri;
+int Joc::nrJocuri;      // variabilele statice trebuie definite in afara clasei, o singura data;
+                        // pentru declarari multiple in fisiere diferite, se foloseste extern
 
 Joc::Joc(int b) : bani(b) {
     nrJocuri++;
@@ -15,10 +16,8 @@ int Joc::getBani() const {
     return bani;
 }
 
-void afis()
-{
+void afis() {
     cout << "Bla bla bla\n";
-
 }
 
 std::ostream &operator<<(std::ostream &os, const Joc &joc) {

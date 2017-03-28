@@ -34,7 +34,7 @@ European& European::operator=(const European &european) {
 }
 
 European::European() {
-    //cout<<"c e\n";
+    //cout<<"Constructor European\n";
 }
 
 short European::getIQ() {
