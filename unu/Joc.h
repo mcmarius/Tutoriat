@@ -5,14 +5,26 @@
 #ifndef TUTORIAT_JOC_H
 #define TUTORIAT_JOC_H
 
-#include "include.h"
+#include <ostream>
+#include "../include.h"
 
 class Joc {
-    int a;
+    static int nrJocuri;
+    int bani;
+    friend class Admin;
+    void setBani(int bani);
 public:
-    // Joc() {}
-    Joc(int a);
-    int getA() const;
+    operator int();
+    Joc(Joc  const &);
+    Joc();
+    Joc(int b);
+    int getBani() const;
+    static int getNrJocuri();
+    friend void afis();
+    friend std::ostream &operator<<(std::ostream &os, const Joc &joc);
+    Joc& operator++();
+    Joc& operator++(int);
+    ~Joc();
 };
 
 #endif //TUTORIAT_JOC_H
