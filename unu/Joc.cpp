@@ -40,9 +40,8 @@ Joc::Joc() {
 }
 
 Joc& Joc::operator++() {
-    Joc *j2 = new Joc(*this);
-    ++j2->bani;
-    return *j2;
+    ++this->bani;
+    return *this;
 }
 
 Joc &Joc::operator++(int) {
