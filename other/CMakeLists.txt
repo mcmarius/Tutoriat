@@ -7,5 +7,5 @@ set(SOURCE_FILES
         #[[main1.cpp
         main2.cpp
         main3.cpp
-        ]] main3.cpp)
+        ]] main1.cpp)
 add_executable(Tutoriat_oth ${SOURCE_FILES})
