@@ -1,3 +1,4 @@
+// http://en.cppreference.com/w/cpp/language/operators
 #include <iostream>
 #include <list>
 #include "ceva.h"
@@ -13,14 +14,20 @@ class B {
     int b;
 public:
     B(int b) : b(b) {}
+    //B operator and(const A &b) { return 0;}     // nu merge!
+    B operator &&(const B &b) { return 1;}
+
+    int getB() const {
+        return b;
+    }
 };
 
-class C : public A, public B {
+/*class C : public A, public B {
 public:
     C() : A(5), B(6) {
 
     }
-};
+};*/
 
 class Complex {
     double re, im;
@@ -60,7 +67,12 @@ public:void f() {std::cout<<"\nf()\n";}
 };
 
 int main() {
-    C c;    // warning: ordinea apelarii constructorilor
+    //A a1(4);
+    B b1(15), b2(89);
+    B hb = b1 and b2;
+    //B x = hb && a1; // nu merge!
+    std::cout<<"Operator and pe clasa B: "<<hb.getB()<<"\n";
+    //C c;    // warning: ordinea apelarii constructorilor
     Complex d(3, 2);
     std::cout<<3+d<<'\n';
 
@@ -77,7 +89,7 @@ int main() {
     try {
         f();
         throw mingeDeGolf;
-        std::cout<<"dupa throw";    // unreachable code!
+        //std::cout<<"dupa throw";    // unreachable code!
     }
     catch(MingeDeBaschet& m) {
 

@@ -8,6 +8,7 @@ add_subdirectory(doi)
 add_subdirectory(trei)
 add_subdirectory(patru)
 add_subdirectory(other)
+add_subdirectory(TestLab9)
 
 set(SOURCE_FILES main.cpp Pacient.cpp Adult.cpp Copil.cpp Data.cpp include.h)
 add_executable(Tutoriat ${SOURCE_FILES})
